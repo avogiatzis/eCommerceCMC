@@ -25,8 +25,7 @@ const Cart = ({ history }) => {
   useEffect(() => {
     let mounted = true;
     const fetchData = async () => {
-      const data = await agent.ShippingCost.get(totalCost);
-      console.log(mounted);
+      const data = totalCost>0 ? await agent.ShippingCost.get(totalCost): 0;
       if (mounted) {
         await setShipping(data);
       }

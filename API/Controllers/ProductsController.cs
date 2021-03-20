@@ -15,7 +15,8 @@ namespace API.Controllers
         }
 
         [HttpGet]
-        public ActionResult<List<Product>> GetProducts(){
+        public ActionResult<List<Product>> GetProducts()
+        {
             return _products.GetList();
         }
     }

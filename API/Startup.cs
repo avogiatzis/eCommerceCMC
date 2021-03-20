@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Application.Orders;
 using Application.Products;
 using Application.Shipping;
 using Microsoft.AspNetCore.Builder;
@@ -45,6 +46,8 @@ namespace API
             services.AddTransient<IList, List>();
             services.AddTransient<IDataContext, DataContext>();
             services.AddTransient<ICost, Cost>();
+            services.AddTransient<ISend, Send>();
+
 
         }
 

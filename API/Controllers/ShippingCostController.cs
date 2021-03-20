@@ -14,7 +14,7 @@ namespace API.Controllers
         [HttpGet]
         public ActionResult<int> GetCost(double cost)
         {
-            return Ok(_cost.CalculateCost(cost));
+            return _cost.CalculateCost(cost);
         }
     }
 }
